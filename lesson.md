@@ -46,4 +46,16 @@ Add:
   public GameObject player;
   private Vector3 offset; // camera offset
 ```
-**Why is `offset` private? Why is `player` public?**\
+**Why is `offset` private? Why is `player` public?** (because we set it in the script)\
+Add:
+```
+void Start()
+{
+	offset = transform.position - player.transform.position;
+}
+
+void LateUpdate() // runs every frame like Update(). Is guaranteed to run after all other objects.
+{
+  transform.position = player.transform.position + offset;
+}
+```
