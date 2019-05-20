@@ -24,8 +24,10 @@ Add:
 void Start()
   { rigidbody = GetComponent<Rigidbody>();
 ```
-Add
+Add:
 ```
   Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
   rigidbody.AddForce(movement);
 ```
+Return to Unity and test game using keyboard. (ball moves slow)\
+Return to VS and add `public float speed;` and change `AddForce(movement)` to `AddForce(movement * speed)`
