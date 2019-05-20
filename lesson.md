@@ -46,7 +46,7 @@ Add:
   public GameObject player;
   private Vector3 offset; // camera offset
 ```
-**Why is `offset` private? Why is `player` public?** (because we set it in the script)\
+**Why is `offset` private? (because we only set it in the script)\
 Add:
 ```
 void Start()
@@ -59,3 +59,4 @@ void LateUpdate() // runs every frame like Update(). Is guaranteed to run after 
   transform.position = player.transform.position + offset;
 }
 ```
+Return to Unity. Drag `Player` to `Main Camera`'s `Camera Controleler -> Player` spot.\
