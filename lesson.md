@@ -90,3 +90,34 @@ Move object around. See how it dips in and out? Change editor-mode to `Global` t
 Move `Pickup` somewhere on `Ground`. Use Ctrl+D to duplicate and fill game with pickups.\
 Duplicate material object and create new color. Apply color to `Pickup` prefab.\
 
+### [Part 6: Counting Points](https://www.youtube.com/watch?v=XtR29MmzuT0)
+Make `Player` active again and open `Player` script in VS.\
+Add:
+```
+void OnTriggerEnter(Collider other)
+{
+  if (other.gameObject.CompareTag("Pickup")) // is the object we collided with a Pickup prefab?
+  {
+    other.gameObject.SetActive(false);
+  }
+}
+```
+Select `Pickup` prefab and add tag "Pickup".\
+Test game. We're still bouncing off the Pickups. **Why?** (Rigidbody - no collision is registered.)\
+Disable mesh renderer on `Player` and a `Pickup` and inspect.\
+Check "Is Trigger" on `Pickup` prefab.\
+Unity is constantly recalculating collider for `Pickups`. Add Rigidbody to prefab.\
+They now fall through! Select "Is Kinematic". Now `Pickups` will not react to physics forces.\
+
+### [Part 7: Displaying Score and Text](https://www.youtube.com/watch?v=bFSLI2cmYYo)
+Open `PlayerController` script.\
+Add `private int count;`, `Start() ... count = 0;`, `OnTriggerEnter() if(...) ... count = count + 1;`\
+Go back to Unity and add Text element using Hieracrchy -> Create\
+Rename `Text` to `Count Text`.\
+Make `Count Text` white. Add placeholder "Count Text".\
+Click on anchor button. Hold Shift + Alt and put it on the top-left.\
+Change Pos X = 10, Pos Y = -10\
+Open `PlayerController` script in VS.\
+Add `using UnityEngine.UI;` to top of file.\
+
+
