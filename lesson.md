@@ -15,5 +15,5 @@ Add `Rigidbody` to `Player` (test game now to watch ball fall)\
 New folder `Scripts` -> create new C# script (and make sure attached to `Player`)\
 Open script in VS\
 Delete default code, add `FixedUpdate()`, which is called just before physics calculations\
-Show Unity doc [`Input`](https://docs.unity3d.com/ScriptReference/Input.html)/[`Input.GetAxis()`](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html)\
+Show [Unity doc](https://docs.unity3d.com/ScriptReference/) [`Input`](https://docs.unity3d.com/ScriptReference/Input.html)/[`Input.GetAxis()`](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html)\
 Add 
