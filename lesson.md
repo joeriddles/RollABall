@@ -31,7 +31,7 @@ Add:
   rigidbody.AddForce(movement);
 ```
 Return to Unity and test game using keyboard. (ball moves slow)\
-Return to VS and add `public float speed;` and change `AddForce(movement)` to `AddForce(movement * speed)`
+Return to VS and add `public float speed;` and change `AddForce(movement)` to `AddForce(movement * speed)`\
 **Why do we make `speed` public?** (So we can change it in Unity)\
 Return to Unity and change `speed` to 100. Then 10. Play with ball speeds.
 
@@ -39,11 +39,11 @@ Return to Unity and change `speed` to 100. Then 10. Play with ball speeds.
 Lift `Main Camera`: Y = 10 and tilt: rotation-x = 45\
 Drag `Main Camera` onto `Player` to make it a child of the `Player` object (typical 3rd person setup).\
 Test the game and new camera set up\
-Detach `Main Camera` from `Player`
+Detach `Main Camera` from `Player`\
 `Main Camera` -> Add Component -> new script\
 Add:
 ```
   public GameObject player;
   private Vector3 offset; // camera offset
 ```
-**Why is `offset` private? Why is `player` public?**
+**Why is `offset` private? Why is `player` public?**\
