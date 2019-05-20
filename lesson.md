@@ -59,4 +59,19 @@ void LateUpdate() // runs every frame like Update(). Is guaranteed to run after 
   transform.position = player.transform.position + offset;
 }
 ```
-Return to Unity. Drag `Player` to `Main Camera`'s `Camera Controleler -> Player` spot.\
+Return to Unity. Drag `Player` to `Main Camera`'s `Camera Controleler -> Player` spot and test game.
+
+### [Part 4: Setting up the Play Area](https://www.youtube.com/watch?v=dahT0wRVO1Q)
+We're gonna add walls and pick-ups\
+Game Object -> new empty object named `Walls` and reset position\
+Game Object -> new cube `WestWall` and reset position. Make child of `Walls`\
+Focus on `WestWall` (select `WestWall` -> Edit -> Frame Selected)\
+`WestWall` scale x = 0.5, y = 2, z = 20.5, position x = -10\
+Duplicate `WestWall` and rename `EastWall`. set position x = 10\
+Duplicate `EastWall` and rename `NorthWall`. set position x = 10, z = 10\
+Rescale `NorthWall` or rotate to face the appropriate direction (rotate y = 90)\
+Duplicate `NorthWall` and rename `SouthWall`. set position z = -10\
+Test game. Highlight `Player` and set play mode to local (top-left). See ball axis change.
+
+### [Part 5: Creating Collectibles](https://www.youtube.com/watch?v=HlDGSStxuHI)
+
