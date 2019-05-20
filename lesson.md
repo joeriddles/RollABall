@@ -32,6 +32,7 @@ Add:
 ```
 Return to Unity and test game using keyboard. (ball moves slow)\
 Return to VS and add `public float speed;` and change `AddForce(movement)` to `AddForce(movement * speed)`
+**Why do we make `speed` public?** (So we can change it in Unity)
 Return to Unity and change `speed` to 100. Then 10. Play with ball speeds.
 
 ### [Part 3: Moving the Camera](https://www.youtube.com/watch?v=Xcm5H2J95iI)
@@ -42,6 +43,7 @@ Detach `Main Camera` from `Player`
 `Main Camera` -> Add Component -> new script
 Add:
 ```
-	public GameObject player;
-	private Vector3 offset; // camera offset
+  public GameObject player;
+  private Vector3 offset; // camera offset
 ```
+**Why is `offset` private? Why is `player` public?**
