@@ -119,5 +119,19 @@ Click on anchor button. Hold Shift + Alt and put it on the top-left.\
 Change Pos X = 10, Pos Y = -10\
 Open `PlayerController` script in VS.\
 Add `using UnityEngine.UI;` to top of file.\
+Add `public Text countText;`, `OnStart()... countText.text = "Count: " + count.ToString();`, `OnTriggerEnter() ... if(...) ... countText.text = "Count: " + count.ToString();`\
+Now we have the same line of code twice!! Time for a new method: `SetCountText()`\
+Return to Unity and drag and drop `Count Text` to `Player`'s "Count Text" slot under "Player Controller"\
+Test game.\
+Create new text "Win Text". Change color to white, size to 24pt, center-align, and add placeholder text\
+Change Pos Y = 75\
+Return to `PlayerController` in VS and add `public Text winText;`, `Start()... winText.text = "";`,
+```
+SetCountText()... 
+if (count >= 10) // use number of Pickups here
+{
+  winText.text = "You Win!";
+}
+```
 
 
