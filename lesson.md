@@ -32,7 +32,7 @@ Add:
 ```
 Return to Unity and test game using keyboard. (ball moves slow)\
 Return to VS and add `public float speed;` and change `AddForce(movement)` to `AddForce(movement * speed)`
-**Why do we make `speed` public?** (So we can change it in Unity)
+**Why do we make `speed` public?** (So we can change it in Unity)\
 Return to Unity and change `speed` to 100. Then 10. Play with ball speeds.
 
 ### [Part 3: Moving the Camera](https://www.youtube.com/watch?v=Xcm5H2J95iI)
@@ -40,7 +40,7 @@ Lift `Main Camera`: Y = 10 and tilt: rotation-x = 45\
 Drag `Main Camera` onto `Player` to make it a child of the `Player` object (typical 3rd person setup).\
 Test the game and new camera set up\
 Detach `Main Camera` from `Player`
-`Main Camera` -> Add Component -> new script
+`Main Camera` -> Add Component -> new script\
 Add:
 ```
   public GameObject player;
