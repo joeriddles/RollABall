@@ -74,4 +74,19 @@ Duplicate `NorthWall` and rename `SouthWall`. set position z = -10\
 Test game. Highlight `Player` and set play mode to local (top-left). See ball axis change.
 
 ### [Part 5: Creating Collectibles](https://www.youtube.com/watch?v=HlDGSStxuHI)
+Game Object -> new cube `Pickup`. Reset origin. Focus on `Pickup`\
+Select `Player` and deselect "active" checkbox by name to hide.\
+`Pickup` y = 0.5\
+Let's make it look better: all scales = .5, all rotates = 45
+Let's add a script to rotate `Pickup` named `Rotator`.
+Open `Rotator` in VS. Remore `Start()` as it is uneeded.\
+Lookup [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html). See [`Rotate`](https://docs.unity3d.com/ScriptReference/Transform.Rotate.html)\
+Add `transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);` to `Update()`\
+Test changes in Unity\
+Create new folder `Prefabs` and drag `Pickup` game object into folder to create a new prefab.\
+Create new empty game object to hold `Pickup`s, named `Pickups`. Move `Pickup` into `Pickups`.
+Click on y-axis in gizmo to get a top-down view and zoom out to see entire game area.\
+Move object around. See how it dips in and out? Change editor-mode to `Global` to move in relation to `Ground`.\
+Move `Pickup` somewhere on `Ground`. Use Ctrl+D to duplicate and fill game with pickups.\
+Duplicate material object and create new color. Apply color to `Pickup` prefab.\
 
