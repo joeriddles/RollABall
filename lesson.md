@@ -16,4 +16,16 @@ New folder `Scripts` -> create new C# script (and make sure attached to `Player`
 Open script in VS\
 Delete default code, add `FixedUpdate()`, which is called just before physics calculations\
 Show [Unity doc](https://docs.unity3d.com/ScriptReference/) [`Input`](https://docs.unity3d.com/ScriptReference/Input.html)/[`Input.GetAxis()`](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html)\
-Add 
+Lookup [RigidBody doc](https://docs.unity3d.com/ScriptReference/Rigidbody.html), see [`AddForce`](https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html)\
+We want to get `Rigidbody` component from Player in script\
+Add `private Rigidbody rigidbody;` class variable\
+Add:
+```
+void Start()
+  { rigidbody = GetComponent<Rigidbody>();
+```
+Add
+```
+  Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
+  rigidbody.AddForce(movement);
+```
