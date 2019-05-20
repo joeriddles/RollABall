@@ -77,8 +77,8 @@ Test game. Highlight `Player` and set play mode to local (top-left). See ball ax
 Game Object -> new cube `Pickup`. Reset origin. Focus on `Pickup`\
 Select `Player` and deselect "active" checkbox by name to hide.\
 `Pickup` y = 0.5\
-Let's make it look better: all scales = .5, all rotates = 45
-Let's add a script to rotate `Pickup` named `Rotator`.
+Let's make it look better: all scales = .5, all rotates = 45\
+Let's add a script to rotate `Pickup` named `Rotator`.\
 Open `Rotator` in VS. Remore `Start()` as it is uneeded.\
 Lookup [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html). See [`Rotate`](https://docs.unity3d.com/ScriptReference/Transform.Rotate.html)\
 Add `transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);` to `Update()`\
