@@ -133,5 +133,11 @@ if (count >= 10) // use number of Pickups here
   winText.text = "You Win!";
 }
 ```
+Return to game and test winning!
 
-
+### [Part 8: Building the Game](https://www.youtube.com/watch?v=hSg3e1M3hKY)
+File -> Build Settings...\
+Add Open Scenes\
+Build And Run\
+Create new folder "Builds" and name build\
+**Test game!**
